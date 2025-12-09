@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Hóa Đơn Tiền Điện</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+  .bill-container { width: 700px; margin: auto; background: #fff; padding: 20px; border: 1px solid #ccc; }
+  .header { text-align: center; margin-bottom: 20px; }
+  .header h2 { margin: 0; }
+  table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+  table, th, td { border: 1px solid #ccc; }
+  th, td { padding: 8px; font-size: 14px; }
+  .section-title { margin-top: 25px; font-weight: bold; text-transform: uppercase; }
+  .total { font-size: 18px; font-weight: bold; text-align: right; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="bill-container">
+  <div class="header">
+    <h2>TẬP ĐOÀN ĐIỆN LỰC VIỆT NAM (EVN)</h2>
+    <p><strong>HÓA ĐƠN TIỀN ĐIỆN SINH HOẠT</strong></p>
+  </div>
+
+  <p><strong>Mã khách hàng:</strong> PA012345678</p>
+  <p><strong>Tên khách hàng:</strong> Nguyễn Văn A</p>
+  <p><strong>Địa chỉ:</strong> 123 Nguyễn Trãi, Quận 5, TP. Hồ Chí Minh</p>
+  <p><strong>Kỳ hóa đơn:</strong> 01/2025</p>
+
+  <p class="section-title">Chỉ số điện</p>
+  <table>
+    <tr>
+      <th>Chỉ số cũ</th>
+      <th>Chỉ số mới</th>
+      <th>Điện tiêu thụ (kWh)</th>
+    </tr>
+    <tr>
+      <td>12.450</td>
+      <td>12.598</td>
+      <td>148</td>
+    </tr>
+  </table>
+
+  <p class="section-title">Chi tiết tiền điện</p>
+  <table>
+    <tr>
+      <th>Bậc</th>
+      <th>Sản lượng (kWh)</th>
+      <th>Đơn giá (đ/kWh)</th>
+      <th>Thành tiền (đ)</th>
+    </tr>
+    <tr>
+      <td>Bậc 1 (0-50)</td>
+      <td>50</td>
+      <td>1.806</td>
+      <td>90.300</td>
+    </tr>
+    <tr>
+      <td>Bậc 2 (51-100)</td>
+      <td>50</td>
+      <td>1.866</td>
+      <td>93.300</td>
+    </tr>
+    <tr>
+      <td>Bậc 3 (101-200)</td>
+      <td>48</td>
+      <td>2.167</td>
+      <td>104.016</td>
+    </tr>
+  </table>
+
+  <p class="total">Tổng cộng: 287.616 đ</p>
+  <p><i>(Đã bao gồm VAT)</i></p>
+
+  <p style="text-align:center; margin-top:40px;">Cảm ơn quý khách đã sử dụng điện!</p>
+</div>
+</body>
+</html>

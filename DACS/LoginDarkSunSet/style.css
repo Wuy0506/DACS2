@@ -1,0 +1,403 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+   box-sizing: border-box;
+}
+html{
+   width: 100%;
+   height: 100%;
+   font-family: 'Spartan', sans-serif;
+}
+
+body{
+   
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   
+}
+.overlay{
+   width: 170%;
+   height: 170%;
+   /* position: relative; */
+   position: absolute;
+   background-image: url(dark-sunset.jpg);
+   /* backdrop-filter: blur(1px); */
+   z-index: 2;
+   filter: blur(13px);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+
+.login-container{
+   position: relative;
+   width: 1090px;
+   z-index: 3;
+   height: 580px;
+   background-image: url(dark-sunset.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: space-between;
+   padding-left: 100px;
+   color: white;
+   font-weight: 300;
+
+}
+
+.login-container>div:first-child{
+   max-width: 400px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 100px 0;
+   padding-bottom: 70px;
+}
+
+.logo span{
+   font-family: 'Kaushan Script', cursive;
+   font-size: 23px;
+}
+.logo i{
+   color:rgb(255, 255, 255);
+   font-size: 34px;
+}
+
+.register > div:first-child{
+   font-size: 32px;
+   max-width: 300px;
+   line-height: 1.3;
+   margin-bottom: 20px;
+}
+.register > p{
+   font-size: 14px;
+   line-height: 1.4;
+   color: rgb(197, 202, 206);
+   margin-bottom: 24px;
+}
+.register .social{
+   margin-left: -20px;
+}
+.register .social a{
+   margin-left: 20px;
+}
+.register .social  i{
+   color:white;
+   font-size: 15px;
+}
+
+.register .social a:hover i
+{
+   color: red;
+}
+
+.form-login{
+   width: 45%;
+   max-width: 48%;
+   height: 100%;
+   backdrop-filter: blur(8px);
+   background-color: rgba(54, 52, 52, 0.2);
+   /* display: flex; */
+   /* align-items: center; */
+   padding:100px 40px;
+}
+
+.form-login .form-group{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 40px;
+}
+
+.form-login .form-group.f-term{
+   display: flex;
+   flex-direction: row !important;
+   align-items: center;
+}
+
+.f-term label{
+   margin-top: 10px;
+   margin-left: 7px;
+}
+.f-term label a{
+   margin-left: 3px;
+   color: rgb(228, 220, 220);
+   /* line-height: 1.2; */
+   font-size: 13px;
+   text-underline-position: under;
+}
+
+.f-term label a:hover{
+   color: red;
+}
+
+.form-login .form .form-group input{
+   background-color: transparent;
+   outline: none;
+   border: none;
+   border-bottom: 1px solid rgba(159, 171, 175, 0.534);
+   margin-top: 10px;
+   color: white;
+   font-size: 17px;
+}
+
+.form-login .form .form-group input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: rgba(255, 255, 255, 0.658);
+   opacity: 1; /* Firefox */
+ }
+ 
+ .form-login .form .form-group .form-label{
+   color: rgba(255, 255, 255, 0.658);
+   font-size: 13px;
+ }
+
+.form-login .form .heading{
+   font-size: 30px;
+   margin-top: 7px;
+}
+
+.spacer{
+   width: 100%;
+   height: 50px;
+}
+
+
+.form-login .form .sign-up{
+   margin-top: 50px;
+   display: flex;
+   align-items: center;
+}
+.form-login .form .sign-up>div{
+   position: relative;
+}
+.form-login .form .sign-up button{
+   background-color: rgb(211, 37, 37);
+   color: rgb(238, 227, 227);
+   width: 160px;
+   height: 35px;
+   border: none;
+   outline: none;
+   font-size: 16px;
+   display: flex;
+   align-items: center;
+   padding-left: 25px;
+
+}
+
+.form-login .form .sign-up button:hover{
+   background-color: rgb(143, 24, 24);
+   cursor: pointer;
+}
+.form-login .form .sign-up>div i{
+   position: absolute;
+   top: 50%;
+   right: 7%;
+   transform: translateY(-50%);
+   /* transform: translateX(50%); */
+   font-size: 12px;
+}
+
+
+.sign-up a{
+   /* display: block; */
+   margin-left: 35px;
+   color: rgb(190, 189, 187);
+   font-size: 14px;
+   text-underline-position: under;
+   /* align-items: center; */
+}
+
+.sign-up a:hover{
+   color: red;
+}
+
+/* Thêm CSS cho thông báo lỗi và thành công */
+.error-message {
+   background-color: rgba(255, 0, 0, 0.2);
+   border-left: 3px solid #ff0000;
+   color: #ffffff;
+   padding: 10px;
+   margin: 10px 0;
+   font-size: 14px;
+   border-radius: 4px;
+}
+
+.success-message {
+   background-color: rgba(0, 128, 0, 0.2);
+   border-left: 3px solid #008000;
+   color: #ffffff;
+   padding: 10px;
+   margin: 10px 0;
+   font-size: 14px;
+   border-radius: 4px;
+}
+
+.form-group.invalid .form-message {
+   color: #ff6b6b;
+   font-size: 13px;
+   margin-top: 6px;
+   display: block;
+}
+
+.form-group.invalid input {
+   border-bottom: 1px solid #ff6b6b !important;
+}
+
+/* Link button style */
+a.form-submit {
+   background-color: rgb(211, 37, 37);
+   color: rgb(238, 227, 227);
+   width: 160px;
+   height: 35px;
+   border: none;
+   outline: none;
+   font-size: 16px;
+   display: flex;
+   align-items: center;
+   padding-left: 25px;
+   text-decoration: none;
+}
+
+a.form-submit:hover {
+   background-color: rgb(143, 24, 24);
+   cursor: pointer;
+   color: rgb(238, 227, 227);
+}
+
+
+/******************************************************/
+      .error-message, .success-message {
+         padding: 10px 15px;
+         border-radius: 8px;
+         margin-bottom: 15px;
+         font-size: 14px;
+         position: relative;
+         padding-left: 45px;
+         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+         transition: all 0.3s ease;
+         animation: fadeIn 0.5s ease-out;
+      }
+      
+      .error-message {
+         background: linear-gradient(to right, #ffebee, #ffcdd2);
+         color: #c62828;
+         border-left: 4px solid #f44336;
+      }
+      
+      .success-message {
+         background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+         color: #2e7d32;
+         border-left: 4px solid #4caf50;
+      }
+      
+      .error-message::before, .success-message::before {
+         font-family: "Font Awesome 5 Pro"; 
+         position: absolute;
+         left: 15px;
+         top: 50%;
+         transform: translateY(-50%);
+         font-size: 18px;
+      }
+      
+      .error-message::before {
+         content: "\f06a"; /* fa-exclamation-circle */
+         color: #f44336;
+      }
+      
+      .success-message::before {
+         content: "\f058"; /* fa-check-circle */
+         color: #4caf50;
+      }
+      
+      @keyframes fadeIn {
+         from { opacity: 0; transform: translateY(-10px); }
+         to { opacity: 1; transform: translateY(0); }
+      }
+      .form-submit {
+         cursor: pointer;
+      }
+      .form-submit:disabled {
+         opacity: 0.6;
+         cursor: not-allowed;
+      }
+      
+      /* CSS cho form đăng ký có thanh cuộn */
+      #form-register {
+         max-height: 450px;
+         overflow-y: auto;
+         padding-right: 10px;
+      }
+      
+      /* Tùy chỉnh thanh cuộn */
+      #form-register::-webkit-scrollbar {
+         width: 5px;
+      }
+      
+      #form-register::-webkit-scrollbar-track {
+         background: rgba(255, 255, 255, 0.1);
+         border-radius: 10px;
+      }
+      
+      #form-register::-webkit-scrollbar-thumb {
+         background: rgba(255, 255, 255, 0.3);
+         border-radius: 10px;
+      }
+      
+      #form-register::-webkit-scrollbar-thumb:hover {
+         background: rgba(255, 255, 255, 0.5);
+      }
+   

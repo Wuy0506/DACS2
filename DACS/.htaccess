@@ -1,0 +1,14 @@
+RewriteEngine On
+
+ErrorDocument 404 /404.html
+
+RewriteRule ^frontend/trangchu/?$ backend/auth.php [L,NC]
+RewriteRule ^frontend/about/?$ frontend/frontend-html/customer/about.php [L,NC]
+RewriteRule ^frontend/room/?$ frontend/frontend-html/customer/roomOfStudent.php [L,NC]
+RewriteRule ^frontend/hoso?$ frontend/frontend-html/customer/profile.php [L,NC]
+RewriteRule ^frontend/dondangky?$ frontend/frontend-html/customer/purchase.php [L,NC]
+RewriteRule ^frontend/yeucausuchua?$ frontend/frontend-html/customer/repairrequest_student.php [L,NC]
+RewriteRule ^frontend/toaA?$ frontend/frontend-html/customer/rooms_by_building.php?building=A [L,NC]
+RewriteRule ^frontend/toaB?$ frontend/frontend-html/customer/rooms_by_building.php?building=B [L,NC]
+RewriteRule ^frontend/toaC?$ frontend/frontend-html/customer/rooms_by_building.php?building=C [L,NC]
+RewriteRule ^frontend/datphong/([0-9]+)/([0-9]+)/?$ frontend/frontend-html/customer/checkin.php?room=$1&user_id=$2 [L,NC]

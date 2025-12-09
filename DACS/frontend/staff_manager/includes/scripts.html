@@ -1,0 +1,114 @@
+<!-- Core Scripts -->
+<script>
+    var _base_url_ = '../';
+</script>
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../plugins/sparklines/sparkline.js"></script>
+<!-- Select2 -->
+<script src="../plugins/select2/js/select2.full.min.js"></script>
+<!-- daterangepicker -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.js"></script>
+
+<!-- Custom Functions -->
+<script>
+    // Preloader Functions
+    function start_loader() {
+        if ($('#preloader').length === 0) {
+            $('body').append('<div id="preloader" class="preloader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; align-items: center; justify-content: center;"><div class="spinner-border text-light" role="status" style="width: 3rem; height: 3rem;"><span class="sr-only">Loading...</span></div></div>');
+        }
+    }
+
+    function end_loader() {
+        $('#preloader').fadeOut('fast', function() {
+            $(this).remove();
+        });
+    }
+
+    // Toast Notification
+    window.alert_toast = function($msg = 'TEST', $bg = 'success', $pos = '') {
+        var Toast = Swal.mixin({
+            toast: true,
+            position: $pos || 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true
+        });
+        Toast.fire({
+            icon: $bg,
+            title: $msg
+        });
+    }
+
+    // Modal Functions
+    $(document).ready(function() {
+        // Viewer Modal for Images/Videos
+        window.viewer_modal = function($src = '') {
+            start_loader();
+            var t = $src.split('.');
+            t = t[t.length - 1];
+            if (t == 'mp4') {
+                var view = $("<video src='" + $src + "' controls autoplay></video>");
+            } else {
+                var view = $("<img src='" + $src + "' />");
+            }
+            $('#viewer_modal .modal-content video,#viewer_modal .modal-content img').remove();
+            $('#viewer_modal .modal-content').append(view);
+            $('#viewer_modal').modal({
+                show: true,
+                backdrop: 'static',
+                keyboard: false,
+                focus: true
+            });
+            end_loader();
+        }
+
+        // Universal Modal
+        window.uni_modal = function($title = '', $url = '', $size = "") {
+            start_loader();
+            // For demo: just show modal with message
+            $('#uni_modal .modal-title').html($title);
+            $('#uni_modal .modal-body').html('<div class="alert alert-info"><i class="fa fa-info-circle"></i> Demo: This would load form from: <code>' + $url + '</code></div>');
+            
+            if ($size != '') {
+                $('#uni_modal .modal-dialog').addClass($size + ' modal-dialog-centered');
+            } else {
+                $('#uni_modal .modal-dialog').removeAttr("class").addClass("modal-dialog modal-md modal-dialog-centered");
+            }
+            
+            $('#uni_modal').modal({
+                show: true,
+                backdrop: 'static',
+                keyboard: false,
+                focus: true
+            });
+            end_loader();
+        }
+
+        // Confirmation Modal
+        window._conf = function($msg = '', $func = '', $params = []) {
+            $('#confirm_modal #confirm').attr('onclick', $func + "(" + $params.join(',') + ")");
+            $('#confirm_modal #delete_content').html($msg);
+            $('#confirm_modal').modal('show');
+        }
+    });
+</script>
+

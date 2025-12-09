@@ -1,0 +1,526 @@
+/********** Template CSS **********/
+:root {
+    --primary: #FEA116;
+    --light: #F1F8FF;
+    --dark: #0F172B;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 600 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .5s;
+    border-radius: 6px;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+
+/*** Navbar ***/
+.navbar-dark .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 43, .7);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header-inner {
+    background: rgba(15, 23, 43, .7);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.booking {
+    position: relative;
+    margin-top: -100px !important;
+    z-index: 1;
+}
+ 
+ 
+
+/*** Footer ***/
+.newsletter {
+    position: relative;
+    z-index: 1;
+}
+
+.footer {
+    position: relative;
+    margin-top: -110px;
+    padding-top: 180px;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+ 
+ 
+  
+/*them1/8/2022*/
+.index-footer-container-fluid {
+    padding: 80px 0 80px 0;
+    margin-top: 80px;
+}
+
+.index-footer-container-fluid .text-center .fs-1 {
+    font-family: noto serif, serif;
+    margin-top: -12px;
+    letter-spacing: 3.5px;
+}
+
+.index-footer-container-fluid .text-center .d-block {
+    font-family: noto serif, serif;
+    margin-top: -11px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-left: 28px;
+}
+
+.index-footer-container-fluid .f-widget1 .title {
+    font-family: noto serif, serif;
+    font-size: 25px;
+}
+
+.index-footer-container-fluid .f-widget1 .mt-3 {
+    font-size: 14px;
+    font-weight: 200 !important;
+}
+
+.index-footer-container-fluid .f-widget2 .title {
+    font-family: noto serif, serif;
+    font-size: 25px;
+}
+
+.index-footer-container-fluid .ft-label label {
+    font-size: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.index-footer-container-fluid .ft-label h1 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #ffff;
+    font-family: noto serif, serif;
+}
+ 
+/***********************/
+ 
+        .bed-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 12px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+        
+        .bed-option {
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .bed-option:hover {
+            border-color: #FEA116;
+            background: #fff8e1;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(254, 161, 22, 0.3);
+        }
+        
+        .bed-option.selected {
+            border-color: #FEA116;
+            background: linear-gradient(135deg, #FEA116 0%, #ff8f00 100%);
+            color: white;
+            transform: scale(1.03);
+            box-shadow: 0 6px 16px rgba(254, 161, 22, 0.4);
+        }
+        
+        .bed-option i {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .bed-option .bed-label {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 2px;
+            white-space: nowrap;
+        }
+        
+        .bed-option small {
+            font-size: 10px;
+            display: block;
+            margin-top: 2px;
+        }
+        
+        .bed-option.unavailable {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #e9ecef;
+        }
+        
+        .bed-option.unavailable:hover {
+            transform: none;
+            border-color: #dee2e6;
+        }
+        
+        /* Responsive cho màn hình nhỏ */
+        @media (max-width: 768px) {
+            .bed-selector {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                gap: 10px;
+                padding: 12px;
+            }
+            
+            .bed-option {
+                padding: 12px 8px;
+                min-height: 90px;
+            }
+            
+            .bed-option i {
+                font-size: 24px;
+                margin-bottom: 6px;
+            }
+            
+            .bed-option .bed-label {
+                font-size: 12px;
+            }
+        }
+        
+        /* Đảm bảo form không bị đè */
+        .payment-form {
+            clear: both;
+        }
+        
+        .overall-payment-form h5 {
+            clear: both;
+            position: relative;
+        }
+        
+        #bedSelector {
+            clear: both;
+            width: 100%;
+            overflow: visible;
+        }
+        
+        /* Floating label không bị đè */
+        .form-floating {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        
+        .form-floating > .form-control {
+            height: calc(3.5rem + 2px);
+        }
+
+/* Profile Form Layout Fixes */
+#studentFields {
+    display: contents;
+    width: 100%;
+}
+
+#studentIdField {
+    margin-bottom: 1rem;
+}
+
+#studentFields > .col-md-6,
+#studentFields > .col-12 {
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    margin-bottom: 1rem;
+    flex: 0 0 auto;
+}
+
+#studentFields > .col-md-6 {
+    width: 50%;
+}
+
+#studentFields > .col-12 {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #studentFields > .col-md-6 {
+        width: 100%;
+    }
+    
+    #studentIdField {
+        width: 100%;
+    }
+}
+
+/* Ensure all form-floating elements have consistent spacing */
+.row.g-3 > .col-md-6,
+.row.g-3 > .col-12 {
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-right: calc(var(--bs-gutter-x) * .5);
+}
+
+/* Form control consistency */
+.form-floating > .form-control,
+.form-floating > .form-select {
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+    padding: 1rem 0.75rem;
+}
+
+.form-floating > label {
+    padding: 1rem 0.75rem;
+    pointer-events: none;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+/* Textarea specific styling */
+.form-floating > textarea.form-control {
+    height: auto;
+    min-height: 100px;
+}
+
+/* Card improvements */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Button improvements */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile avatar */
+.rounded-circle {
+    border: 4px solid #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.rounded-circle:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .form-floating > .form-control,
+    .form-floating > .form-select {
+        font-size: 0.95rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+    }
+}

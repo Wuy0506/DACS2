@@ -1,0 +1,111 @@
+
+        /* Calendar Widget Styling */
+        .flatpickr-calendar {
+            width: 100% !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+        
+        .flatpickr-months {
+            padding: 15px 0;
+        }
+        
+        .flatpickr-current-month {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .flatpickr-monthDropdown-months {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .numInputWrapper {
+            font-size: 1.1rem;
+        }
+        
+        .flatpickr-prev-month,
+        .flatpickr-next-month {
+            padding: 10px;
+        }
+        
+        .flatpickr-prev-month svg,
+        .flatpickr-next-month svg {
+            width: 12px;
+            height: 12px;
+        }
+        
+        .flatpickr-weekdays {
+            background: transparent;
+            padding: 10px 0;
+        }
+        
+        span.flatpickr-weekday {
+            color: #999;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+        
+        .flatpickr-days {
+            width: 100% !important;
+        }
+        
+        .dayContainer {
+            width: 100% !important;
+            min-width: 100% !important;
+            max-width: 100% !important;
+        }
+        
+        .flatpickr-day {
+            max-width: 14.2857% !important;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        
+        .flatpickr-day.prevMonthDay,
+        .flatpickr-day.nextMonthDay {
+            color: #ccc;
+        }
+        
+        .flatpickr-day.today {
+            border-color: #3b82f6;
+            background: transparent;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        
+        .flatpickr-day.selected {
+            background: #3b82f6 !important;
+            border-color: #3b82f6 !important;
+            color: white !important;
+            font-weight: 600;
+        }
+        
+        .flatpickr-day:hover:not(.selected) {
+            background: #f0f0f0;
+            border-color: #f0f0f0;
+        }
+ 
+    .user-img {
+        position: absolute;
+        height: 27px;
+        width: 27px;
+        object-fit: cover;
+        left: -7%;
+        top: -12%;
+    }
+
+    .btn-rounded {
+        border-radius: 50px;
+    }
+
+    aside.main-sidebar {
+        background-image: url('../uploads/default/portrait1.jpg') !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
